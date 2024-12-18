@@ -43,3 +43,34 @@ mkdir -p include/gcp
 mv /path/to/your/credentials.json include/gcp/service_account.json
 ```
 
+### 4. Download Data from Kaggle
+Download the e-commerce data from Kaggle to your local machine. You can find the dataset from https://www.kaggle.com/datasets/mmohaiminulislam/ecommerce-data-analysis/data.
+
+### 6. Load Data to BigQuery
+Create another DAG in Apache Airflow to load the data from GCS to BigQuery.
+
+
+## Running the Pipeline
+### 1. Start the Airflow web server and scheduler using Docker:
+
+```sh
+astro dev start
+```
+
+### 2. Access the Airflow UI:
+
+Open your web browser and go to http://localhost:8080.
+
+
+### 3. Configure the key file path in the Airflow UI:
+
+- Note: In the Airflow UI, inside configs, put the key file path of credentials.json from your Docker container's storage, not your local machine.
+- To find the local path of your file in the Docker container, use the following commands:
+    ```sh
+    astro dev bash
+    ls /usr/local/airflow/include/gcp/service-account.json
+    ```
+
+- Use the displayed path (e.g., /usr/local/airflow/include/gcp/service_account.json) in your Airflow configuration.
+
+### 4. Trigger the DAGs from the Airflow UI to upload data to GCS and load it into BigQuery.

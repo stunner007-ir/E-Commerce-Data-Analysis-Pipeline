@@ -8,4 +8,5 @@ astro
 airflow-webserver.pid
 webserver_config.py
 airflow.cfg
-airflow.dservice_account.json
+airflow.db
+service_account.json

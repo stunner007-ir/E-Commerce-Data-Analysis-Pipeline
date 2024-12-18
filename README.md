@@ -36,6 +36,30 @@ astro dev init
 ```
 
 ### 3. Set Up Google Cloud Credentials
+1. Create a Service Account:
+    - Go to the Google Cloud Console.
+    - Navigate to IAM & Admin > Service Accounts.
+    - Click Create Service Account.
+    - Provide a name and description for the service account.
+    - Click Create.
+
+2. Set Up Permissions:
+
+    - Assign the following roles to the service account:
+        - BigQuery Admin
+        - Storage Admin
+    - Click Continue and then Done.
+
+3. Download the Credentials File:
+
+    - Click on the created service account.
+    - Navigate to the Keys tab.
+    - Click Add Key > Create New Key.
+    - Select JSON and click Create.
+    - Download the credentials.json file.
+    - Place the Credentials File:
+
+### 4. Set Up Google Cloud Credentials
 Place your Google Cloud credentials.json file in the include/gcp folder.
 
 ```sh
@@ -43,7 +67,7 @@ mkdir -p include/gcp
 mv /path/to/your/credentials.json include/gcp/service_account.json
 ```
 
-### 4. Download Data from Kaggle
+### 5. Download Data from Kaggle
 Download the e-commerce data from Kaggle to your local machine. You can find the dataset from https://www.kaggle.com/datasets/mmohaiminulislam/ecommerce-data-analysis/data.
 
 ### 6. Load Data to BigQuery

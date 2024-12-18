@@ -74,3 +74,7 @@ Open your web browser and go to http://localhost:8080.
 - Use the displayed path (e.g., /usr/local/airflow/include/gcp/service_account.json) in your Airflow configuration.
 
 ### 4. Trigger the DAGs from the Airflow UI to upload data to GCS and load it into BigQuery.
+
+### License
+
+This project is licensed under the [MIT License](LICENSE). 

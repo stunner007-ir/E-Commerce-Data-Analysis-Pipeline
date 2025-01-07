@@ -1,0 +1,13 @@
+checks for raw_Trans_dim:
+  - schema:
+      fail:
+        when required column missing: [time_key, date, hour, day, week, month, quarter, year]
+        when wrong column type:
+          time_key: string
+          date: timestamp
+          hour: integer
+          day: integer
+          week: string
+          month: integer
+          quarter: string
+          year: integer

@@ -1,2 +1,26 @@
 FROM quay.io/astronomer/astro-runtime:12.5.0
 
+# Install build dependencies as root
+USER root
+RUN apt-get update && apt-get install -y \
+    python3-dev \
+    build-essential \
+    libatlas-base-dev \
+    gfortran \
+    libopenblas-dev \
+    liblapack-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Switch back to the airflow user
+USER astro
+
+# Create and activate a virtual environment, then install dependencies
+RUN python -m venv /home/astro/soda_venv && \
+    /home/astro/soda_venv/bin/pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    /home/astro/soda_venv/bin/pip install --no-cache-dir numpy && \
+    /home/astro/soda_venv/bin/pip install --no-cache-dir pandas==1.5.3 && \
+    /home/astro/soda_venv/bin/pip install --no-cache-dir soda-core-bigquery==3.0.45 && \
+    /home/astro/soda_venv/bin/pip install --no-cache-dir soda-core-scientific==3.0.45
+
+# Set the virtual environment as the default Python environment
+ENV PATH="/home/astro/soda_venv/bin:$PATH"

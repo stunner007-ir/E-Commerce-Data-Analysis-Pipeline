@@ -1,0 +1,251 @@
+[2024-12-24T07:28:52.433+0000] {processor.py:186} INFO - Started process (PID=40) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:28:52.436+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:28:52.456+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:52.453+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:28:52.612+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:52.611+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:28:52.615+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:52.615+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:28:52.644+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:28:53.164+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.162+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:gcs_to_bigquery
+[2024-12-24T07:28:53.186+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.186+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:gcs_to_bigquery
+[2024-12-24T07:28:53.199+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.199+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:gcs_to_bigquery
+[2024-12-24T07:28:53.214+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.214+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:gcs_to_bigquery
+[2024-12-24T07:28:53.228+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.227+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:gcs_to_bigquery
+[2024-12-24T07:28:53.244+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.243+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:gcs_to_bigquery
+[2024-12-24T07:28:53.259+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.259+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:gcs_to_bigquery
+[2024-12-24T07:28:53.263+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.262+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:28:53.299+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.299+0000] {dag.py:3262} INFO - Creating ORM DAG for gcs_to_bigquery
+[2024-12-24T07:28:53.302+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:28:53.302+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:28:53.336+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.952 seconds
+[2024-12-24T07:29:24.213+0000] {processor.py:186} INFO - Started process (PID=107) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:29:24.215+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:29:24.219+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:24.218+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:29:24.252+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:24.252+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:29:24.255+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:24.254+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:29:24.270+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:29:24.377+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:24.376+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:29:24.450+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:24.450+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:29:24.514+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.310 seconds
+[2024-12-24T07:29:55.337+0000] {processor.py:186} INFO - Started process (PID=173) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:29:55.339+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:29:55.344+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:55.343+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:29:55.377+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:55.376+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:29:55.378+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:55.378+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:29:55.384+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:29:55.443+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:55.442+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:29:55.476+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:29:55.475+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:29:55.532+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.204 seconds
+[2024-12-24T07:30:25.790+0000] {processor.py:186} INFO - Started process (PID=239) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:30:25.792+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:30:25.800+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:25.799+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:30:25.866+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:25.866+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:30:25.870+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:25.869+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:30:25.885+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:30:25.965+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:25.963+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:30:26.007+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:26.007+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:30:26.048+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.276 seconds
+[2024-12-24T07:30:56.222+0000] {processor.py:186} INFO - Started process (PID=305) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:30:56.224+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:30:56.229+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:56.228+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:30:56.268+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:56.268+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:30:56.270+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:56.269+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:30:56.279+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:30:56.323+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:56.322+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:30:56.346+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:30:56.345+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:30:56.380+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.169 seconds
+[2024-12-24T07:31:27.166+0000] {processor.py:186} INFO - Started process (PID=370) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:31:27.169+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:31:27.181+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:27.181+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:31:27.259+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:27.258+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:31:27.265+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:27.264+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:31:27.280+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:31:27.339+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:27.338+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:31:27.368+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:27.367+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:31:27.413+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.280 seconds
+[2024-12-24T07:31:57.950+0000] {processor.py:186} INFO - Started process (PID=436) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:31:57.960+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:31:57.994+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:57.988+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:31:58.109+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:58.109+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:31:58.114+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:58.113+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:31:58.133+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:31:58.194+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:58.193+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:31:58.226+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:31:58.226+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:31:58.270+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.400 seconds
+[2024-12-24T07:32:29.094+0000] {processor.py:186} INFO - Started process (PID=502) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:32:29.096+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:32:29.100+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:32:29.100+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:32:29.149+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:32:29.149+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:32:29.152+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:32:29.152+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:32:29.165+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:32:29.224+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:32:29.222+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:32:29.250+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:32:29.250+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:32:29.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.214 seconds
+[2024-12-24T07:33:00.118+0000] {processor.py:186} INFO - Started process (PID=568) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:33:00.134+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:33:00.228+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:00.180+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:33:00.422+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:00.420+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:33:00.426+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:00.425+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:33:00.444+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:33:00.602+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:00.601+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:33:00.656+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:00.655+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:33:00.714+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.706 seconds
+[2024-12-24T07:33:31.372+0000] {processor.py:186} INFO - Started process (PID=634) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:33:31.373+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:33:31.377+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:31.376+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:33:31.408+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:31.407+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:33:31.410+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:31.409+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:33:31.416+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:33:31.453+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:31.452+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:33:31.472+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:33:31.471+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:33:31.501+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.138 seconds
+[2024-12-24T07:34:01.565+0000] {processor.py:186} INFO - Started process (PID=701) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:34:01.567+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:34:01.573+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:01.573+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:34:01.601+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:01.601+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:34:01.604+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:01.603+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:34:01.612+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:34:01.660+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:01.659+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:34:01.686+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:01.685+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:34:01.719+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.163 seconds
+[2024-12-24T07:34:31.786+0000] {processor.py:186} INFO - Started process (PID=767) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:34:31.787+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:34:31.792+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:31.792+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:34:31.823+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:31.823+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:34:31.825+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:31.824+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:34:31.831+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:34:31.867+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:31.866+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:34:31.884+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:34:31.884+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:34:31.913+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.137 seconds
+[2024-12-24T07:35:02.420+0000] {processor.py:186} INFO - Started process (PID=833) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:35:02.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:35:02.425+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:02.425+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:35:02.456+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:02.456+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:35:02.458+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:02.458+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:35:02.467+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:35:02.665+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:02.664+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:35:02.770+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:02.770+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:35:02.852+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.441 seconds
+[2024-12-24T07:35:33.473+0000] {processor.py:186} INFO - Started process (PID=899) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:35:33.475+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:35:33.478+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:33.478+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:35:33.518+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:33.517+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:35:33.519+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:33.519+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:35:33.527+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:35:33.569+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:33.569+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:35:33.591+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:35:33.591+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:35:33.628+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.166 seconds
+[2024-12-24T07:36:04.565+0000] {processor.py:186} INFO - Started process (PID=965) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:36:04.567+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:36:04.572+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:04.572+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:36:04.606+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:04.606+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:36:04.608+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:04.607+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:36:04.616+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:36:04.656+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:04.656+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:36:04.680+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:04.680+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:36:04.714+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.162 seconds
+[2024-12-24T07:36:35.397+0000] {processor.py:186} INFO - Started process (PID=1031) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:36:35.398+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:36:35.407+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:35.406+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:36:35.462+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:35.461+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:36:35.465+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:35.465+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:36:35.476+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:36:35.532+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:35.531+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:36:35.560+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:36:35.560+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:36:35.622+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.236 seconds
+[2024-12-24T07:37:06.161+0000] {processor.py:186} INFO - Started process (PID=1097) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:37:06.163+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:37:06.166+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:06.166+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:37:06.198+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:06.198+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:37:06.200+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:06.200+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:37:06.207+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:37:06.246+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:06.245+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:37:06.268+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:06.267+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:37:06.312+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.159 seconds
+[2024-12-24T07:37:36.495+0000] {processor.py:186} INFO - Started process (PID=1163) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:37:36.498+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:37:36.508+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:36.507+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:37:36.548+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:36.548+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:37:36.549+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:36.549+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:37:36.560+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:37:36.609+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:36.608+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:37:36.633+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:37:36.633+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:37:36.703+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.218 seconds
+[2024-12-24T07:38:06.910+0000] {processor.py:186} INFO - Started process (PID=1229) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:38:06.912+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:38:06.917+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:06.916+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:38:06.965+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:06.965+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:38:06.968+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:06.968+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:38:06.981+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:38:07.037+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:07.036+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:38:07.067+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:07.066+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:38:07.099+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.200 seconds
+[2024-12-24T07:38:37.261+0000] {processor.py:186} INFO - Started process (PID=1294) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:38:37.263+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:38:37.267+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:37.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:38:37.308+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:37.307+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:38:37.312+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:37.312+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:38:37.319+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:38:37.364+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:37.363+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:38:37.391+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:38:37.390+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:38:37.432+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.183 seconds
+[2024-12-24T07:39:07.547+0000] {processor.py:186} INFO - Started process (PID=1360) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:39:07.548+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:39:07.554+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:07.553+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:39:07.588+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:07.588+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:39:07.590+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:07.589+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:39:07.597+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:39:07.636+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:07.635+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:39:07.658+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:07.658+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:39:07.689+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.151 seconds
+[2024-12-24T07:39:38.556+0000] {processor.py:186} INFO - Started process (PID=1426) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:39:38.558+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:39:38.562+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:38.561+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:39:38.595+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:38.594+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:39:38.596+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:38.596+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:39:38.603+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:39:38.640+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:38.639+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:39:38.659+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:39:38.659+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:39:38.687+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.141 seconds
+[2024-12-24T07:40:09.046+0000] {processor.py:186} INFO - Started process (PID=1492) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:40:09.047+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:40:09.049+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:09.048+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:40:09.082+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:09.081+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:40:09.083+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:09.083+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:40:09.091+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:40:09.127+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:09.127+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:40:09.147+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:09.146+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:40:09.175+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.139 seconds
+[2024-12-24T07:40:39.466+0000] {processor.py:186} INFO - Started process (PID=1559) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:40:39.467+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:40:39.471+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:39.470+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:40:39.513+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:39.513+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:40:39.515+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:39.514+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:40:39.522+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:40:39.565+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:39.565+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:40:39.596+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:40:39.596+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:40:39.628+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.175 seconds
+[2024-12-24T07:41:09.726+0000] {processor.py:186} INFO - Started process (PID=1625) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:41:09.728+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:41:09.730+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:09.729+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:41:09.776+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:09.776+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:41:09.779+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:09.778+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:41:09.787+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:41:09.843+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:09.842+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:41:09.866+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:09.865+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:41:09.895+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.179 seconds
+[2024-12-24T07:41:39.997+0000] {processor.py:186} INFO - Started process (PID=1692) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:41:39.998+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:41:40.002+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:40.001+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:41:40.039+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:40.038+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:41:40.043+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:40.042+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:41:40.051+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:41:40.101+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:40.100+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:41:40.127+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:41:40.127+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:41:40.166+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.180 seconds
+[2024-12-24T07:42:10.315+0000] {processor.py:186} INFO - Started process (PID=1760) to work on /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:42:10.318+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/gcs_to_bigquery.py for tasks to queue
+[2024-12-24T07:42:10.323+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:42:10.322+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:42:10.375+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:42:10.375+0000] {gcs_to_bigquery.py:51} INFO - BigQuery dataset creation task initialized for dataset ID: ecommerce
+[2024-12-24T07:42:10.379+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:42:10.379+0000] {gcs_to_bigquery.py:62} INFO - Listing files in the bucket...
+[2024-12-24T07:42:10.386+0000] {processor.py:925} INFO - DAG(s) 'gcs_to_bigquery' retrieved from /opt/airflow/dags/gcs_to_bigquery.py
+[2024-12-24T07:42:10.436+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:42:10.436+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-24T07:42:10.462+0000] {logging_mixin.py:190} INFO - [2024-12-24T07:42:10.462+0000] {dag.py:4180} INFO - Setting next_dagrun for gcs_to_bigquery to None, run_after=None
+[2024-12-24T07:42:10.494+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/gcs_to_bigquery.py took 0.198 seconds

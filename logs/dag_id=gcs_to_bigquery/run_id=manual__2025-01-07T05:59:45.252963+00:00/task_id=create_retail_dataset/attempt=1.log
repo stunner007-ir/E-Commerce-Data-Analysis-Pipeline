@@ -1,0 +1,127 @@
+[2025-01-09T05:01:32.506+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-09T05:01:32.549+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: gcs_to_bigquery.create_retail_dataset manual__2025-01-07T05:59:45.252963+00:00 [queued]>
+[2025-01-09T05:01:32.564+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: gcs_to_bigquery.create_retail_dataset manual__2025-01-07T05:59:45.252963+00:00 [queued]>
+[2025-01-09T05:01:32.565+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-09T05:01:32.588+0000] {taskinstance.py:2889} INFO - Executing <Task(BigQueryCreateEmptyDatasetOperator): create_retail_dataset> on 2025-01-07 05:59:45.252963+00:00
+[2025-01-09T05:01:32.603+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=58) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-09T05:01:32.611+0000] {standard_task_runner.py:72} INFO - Started process 60 to run task
+[2025-01-09T05:01:32.612+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bigquery', 'create_retail_dataset', 'manual__2025-01-07T05:59:45.252963+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bigquery.py', '--cfg-path', '/tmp/tmpn0usn196']
+[2025-01-09T05:01:32.618+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask create_retail_dataset
+[2025-01-09T05:01:32.726+0000] {task_command.py:467} INFO - Running <TaskInstance: gcs_to_bigquery.create_retail_dataset manual__2025-01-07T05:59:45.252963+00:00 [running]> on host c6dd3e8089d1
+[2025-01-09T05:01:32.874+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='gcs_to_bigquery' AIRFLOW_CTX_TASK_ID='create_retail_dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-01-07T05:59:45.252963+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-07T05:59:45.252963+00:00'
+[2025-01-09T05:01:32.882+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-09T05:01:32.883+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-09T05:01:32.884+0000] {logging_mixin.py:190} INFO - Current task name:create_retail_dataset state:running start_date:2025-01-09 05:01:32.550198+00:00
+[2025-01-09T05:01:32.885+0000] {logging_mixin.py:190} INFO - Dag name:gcs_to_bigquery and current dag run status:running
+[2025-01-09T05:01:32.886+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-09T05:01:32.887+0000] {connection.py:531} ERROR - Unable to retrieve connection from secrets backend (EnvironmentVariablesBackend). Checking subsequent secrets backend.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 526, in get_connection_from_secrets
+    conn = secrets_backend.get_connection(conn_id=conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/secrets/base_secrets.py", line 96, in get_connection
+    value = self.get_conn_value(conn_id=conn_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/secrets/environment_variables.py", line 52, in get_conn_value
+    return os.environ.get(CONN_ENV_PREFIX + conn_id.upper())
+                                            ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'upper'
+[2025-01-09T05:01:32.926+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1865, in execute
+    bq_hook = BigQueryHook(
+              ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 160, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/common/hooks/base_google.py", line 283, in __init__
+    self.extras: dict = self.get_connection(self.gcp_conn_id).extra_dejson
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 537, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `None` isn't defined
+[2025-01-09T05:01:32.939+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-01-09T05:01:32.941+0000] {logging_mixin.py:190} INFO - Task start:2025-01-09 05:01:32.550198+00:00 end:2025-01-09 05:01:32.939011+00:00 duration:0.388813
+[2025-01-09T05:01:32.942+0000] {logging_mixin.py:190} INFO - Task:<Task(BigQueryCreateEmptyDatasetOperator): create_retail_dataset> dag:<DAG: gcs_to_bigquery> dagrun:<DagRun gcs_to_bigquery @ 2025-01-07 05:59:45.252963+00:00: manual__2025-01-07T05:59:45.252963+00:00, state:running, queued_at: 2025-01-07 05:59:45.297394+00:00. externally triggered: True>
+[2025-01-09T05:01:32.944+0000] {logging_mixin.py:190} INFO - Failure caused by The conn_id `None` isn't defined
+[2025-01-09T05:01:32.945+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=gcs_to_bigquery, task_id=create_retail_dataset, run_id=manual__2025-01-07T05:59:45.252963+00:00, execution_date=20250107T055945, start_date=20250109T050132, end_date=20250109T050132
+[2025-01-09T05:01:32.982+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-09T05:01:32.984+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 11 for task create_retail_dataset (The conn_id `None` isn't defined; 60)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1865, in execute
+    bq_hook = BigQueryHook(
+              ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 160, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/google/common/hooks/base_google.py", line 283, in __init__
+    self.extras: dict = self.get_connection(self.gcp_conn_id).extra_dejson
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 537, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `None` isn't defined
+[2025-01-09T05:01:33.009+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-09T05:01:33.064+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-09T05:01:33.074+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

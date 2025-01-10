@@ -1,4 +1,4 @@
-checks for raw_Trans_dim:
+checks for Trans_dim:
   - schema:
       fail:
         when required column missing: [time_key, date, hour, day, week, month, quarter, year]

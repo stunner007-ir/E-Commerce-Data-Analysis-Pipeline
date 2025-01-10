@@ -1,0 +1,2016 @@
+[2025-01-09T05:01:24.239+0000] {processor.py:186} INFO - Started process (PID=42) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:01:24.249+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:01:24.278+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:01:24.274+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:01:24.384+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:01:24.358+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:01:24.390+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:01:24.469+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.330 seconds
+[2025-01-09T05:01:55.420+0000] {processor.py:186} INFO - Started process (PID=109) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:01:55.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:01:55.429+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:01:55.428+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:01:55.477+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:01:55.468+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:01:55.481+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:01:55.525+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.118 seconds
+[2025-01-09T05:02:26.171+0000] {processor.py:186} INFO - Started process (PID=176) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:02:26.172+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:02:26.176+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:02:26.176+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:02:26.209+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:02:26.203+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:02:26.211+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:02:26.238+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.075 seconds
+[2025-01-09T05:02:57.023+0000] {processor.py:186} INFO - Started process (PID=243) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:02:57.027+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:02:57.043+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:02:57.042+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:02:57.091+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:02:57.081+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:02:57.093+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:02:57.118+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.105 seconds
+[2025-01-09T05:03:27.583+0000] {processor.py:186} INFO - Started process (PID=310) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:03:27.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:03:27.588+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:03:27.587+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:03:27.617+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:03:27.609+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:03:27.619+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:03:27.653+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.078 seconds
+[2025-01-09T05:03:58.029+0000] {processor.py:186} INFO - Started process (PID=377) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:03:58.031+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:03:58.036+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:03:58.036+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:03:58.083+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:03:58.076+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:03:58.085+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:03:58.117+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.095 seconds
+[2025-01-09T05:04:29.005+0000] {processor.py:186} INFO - Started process (PID=444) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:04:29.007+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:04:29.013+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:04:29.013+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:04:29.055+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:04:29.046+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:04:29.057+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:04:29.093+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.097 seconds
+[2025-01-09T05:04:59.578+0000] {processor.py:186} INFO - Started process (PID=511) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:04:59.580+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:04:59.584+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:04:59.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:04:59.618+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:04:59.611+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:04:59.620+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:04:59.648+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.077 seconds
+[2025-01-09T05:05:30.316+0000] {processor.py:186} INFO - Started process (PID=578) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:05:30.318+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:05:30.324+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:05:30.323+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:05:30.368+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:05:30.360+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:05:30.370+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:05:30.402+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.095 seconds
+[2025-01-09T05:06:00.703+0000] {processor.py:186} INFO - Started process (PID=645) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:06:00.705+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:06:00.709+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:06:00.708+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:06:00.742+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:06:00.736+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:06:00.744+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:06:00.770+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.074 seconds
+[2025-01-09T05:06:31.302+0000] {processor.py:186} INFO - Started process (PID=712) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:06:31.303+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:06:31.308+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:06:31.307+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:06:31.380+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:06:31.356+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:06:31.383+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:06:31.434+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.145 seconds
+[2025-01-09T05:07:02.394+0000] {processor.py:186} INFO - Started process (PID=779) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:07:02.396+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:07:02.403+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:07:02.402+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:07:02.460+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:07:02.448+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:07:02.464+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:07:02.505+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.124 seconds
+[2025-01-09T05:07:32.604+0000] {processor.py:186} INFO - Started process (PID=845) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:07:32.608+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:07:32.610+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:07:32.609+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:07:32.664+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:07:32.654+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:07:32.666+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:07:32.709+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.113 seconds
+[2025-01-09T05:08:03.185+0000] {processor.py:186} INFO - Started process (PID=910) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:08:03.187+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:08:03.190+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:08:03.189+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:08:03.227+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:08:03.221+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:08:03.228+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:08:03.275+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.101 seconds
+[2025-01-09T05:08:33.968+0000] {processor.py:186} INFO - Started process (PID=975) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:08:33.973+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:08:33.981+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:08:33.979+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:08:34.056+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:08:34.044+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:08:34.062+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:08:34.117+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.163 seconds
+[2025-01-09T05:09:04.446+0000] {processor.py:186} INFO - Started process (PID=1041) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:09:04.448+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:09:04.450+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:09:04.450+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:09:04.506+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:09:04.491+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:09:04.508+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:09:04.601+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.163 seconds
+[2025-01-09T05:09:35.187+0000] {processor.py:186} INFO - Started process (PID=1106) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:09:35.190+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:09:35.194+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:09:35.194+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:09:35.251+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:09:35.244+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:09:35.254+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:09:35.299+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.132 seconds
+[2025-01-09T05:10:05.685+0000] {processor.py:186} INFO - Started process (PID=1172) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:10:05.688+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:10:05.692+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:10:05.692+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:10:05.753+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:10:05.745+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:10:05.756+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:10:05.804+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.132 seconds
+[2025-01-09T05:10:36.405+0000] {processor.py:186} INFO - Started process (PID=1238) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:10:36.407+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:10:36.410+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:10:36.410+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:10:36.474+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:10:36.463+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:10:36.477+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:10:36.520+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.126 seconds
+[2025-01-09T05:11:06.659+0000] {processor.py:186} INFO - Started process (PID=1304) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:11:06.661+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:11:06.664+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:11:06.663+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:11:06.698+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:11:06.693+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:11:06.700+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:11:06.732+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.080 seconds
+[2025-01-09T05:11:37.260+0000] {processor.py:186} INFO - Started process (PID=1370) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:11:37.264+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:11:37.267+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:11:37.267+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:11:37.324+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:11:37.314+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:11:37.328+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:11:37.376+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.127 seconds
+[2025-01-09T05:12:07.814+0000] {processor.py:186} INFO - Started process (PID=1442) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:12:07.817+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:12:07.819+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:12:07.819+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:12:07.870+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:12:07.860+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:12:07.874+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:12:07.916+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.119 seconds
+[2025-01-09T05:12:38.846+0000] {processor.py:186} INFO - Started process (PID=1508) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:12:38.848+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:12:38.857+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:12:38.855+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:12:38.907+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:12:38.901+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:12:38.914+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:12:38.991+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.193 seconds
+[2025-01-09T05:13:09.495+0000] {processor.py:186} INFO - Started process (PID=1574) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:13:09.497+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:13:09.499+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:13:09.498+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:13:09.547+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:13:09.537+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:13:09.549+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:13:09.593+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.107 seconds
+[2025-01-09T05:13:39.972+0000] {processor.py:186} INFO - Started process (PID=1640) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:13:39.975+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:13:39.977+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:13:39.977+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:13:40.019+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:13:40.012+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:13:40.020+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:13:40.052+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.090 seconds
+[2025-01-09T05:14:10.183+0000] {processor.py:186} INFO - Started process (PID=1706) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:14:10.185+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:14:10.187+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:14:10.187+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:14:10.223+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:14:10.217+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:14:10.225+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:14:10.254+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.079 seconds
+[2025-01-09T05:14:41.176+0000] {processor.py:186} INFO - Started process (PID=1771) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:14:41.179+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:14:41.182+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:14:41.181+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:14:41.225+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:14:41.214+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:14:41.228+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:14:41.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.094 seconds
+[2025-01-09T05:15:11.538+0000] {processor.py:186} INFO - Started process (PID=1837) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:15:11.539+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:15:11.542+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:15:11.542+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:15:11.584+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:15:11.577+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:15:11.586+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:15:11.618+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.089 seconds
+[2025-01-09T05:15:41.698+0000] {processor.py:186} INFO - Started process (PID=1903) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:15:41.700+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:15:41.704+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:15:41.703+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:15:41.755+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:15:41.748+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:15:41.757+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:15:41.797+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.107 seconds
+[2025-01-09T05:16:12.109+0000] {processor.py:186} INFO - Started process (PID=1969) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:16:12.112+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:16:12.117+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:16:12.116+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:16:12.174+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:16:12.162+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:16:12.176+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:16:12.234+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.140 seconds
+[2025-01-09T05:16:42.720+0000] {processor.py:186} INFO - Started process (PID=2034) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:16:42.722+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:16:42.726+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:16:42.725+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:16:42.773+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:16:42.764+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:16:42.775+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:16:42.822+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.118 seconds
+[2025-01-09T05:17:13.104+0000] {processor.py:186} INFO - Started process (PID=2100) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:17:13.105+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:17:13.108+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:17:13.107+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:17:13.152+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:17:13.145+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:17:13.155+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:17:13.193+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.098 seconds
+[2025-01-09T05:17:43.707+0000] {processor.py:186} INFO - Started process (PID=2166) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:17:43.708+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:17:43.713+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:17:43.712+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:17:43.765+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:17:43.755+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:17:43.767+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:17:43.809+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.114 seconds
+[2025-01-09T05:18:14.174+0000] {processor.py:186} INFO - Started process (PID=2233) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:18:14.177+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:18:14.181+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:18:14.181+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:18:14.228+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:18:14.217+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:18:14.231+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:18:14.272+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.112 seconds
+[2025-01-09T05:18:44.979+0000] {processor.py:186} INFO - Started process (PID=2299) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:18:44.982+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:18:44.985+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:18:44.984+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:18:45.035+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:18:45.026+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:18:45.037+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:18:45.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.116 seconds
+[2025-01-09T05:19:16.003+0000] {processor.py:186} INFO - Started process (PID=2365) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:19:16.005+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:19:16.007+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:19:16.007+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:19:16.054+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:19:16.047+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:19:16.056+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:19:16.099+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.105 seconds
+[2025-01-09T05:19:46.275+0000] {processor.py:186} INFO - Started process (PID=2432) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:19:46.278+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:19:46.280+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:19:46.279+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:19:46.313+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:19:46.306+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:19:46.315+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:19:46.350+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.085 seconds
+[2025-01-09T05:20:16.464+0000] {processor.py:186} INFO - Started process (PID=2498) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:20:16.466+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:20:16.469+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:20:16.469+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:20:16.511+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:20:16.504+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:20:16.514+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:20:16.552+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.099 seconds
+[2025-01-09T05:20:46.865+0000] {processor.py:186} INFO - Started process (PID=2564) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:20:46.868+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:20:46.872+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:20:46.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:20:46.909+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:20:46.903+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:20:46.912+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:20:46.948+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.095 seconds
+[2025-01-09T05:21:17.188+0000] {processor.py:186} INFO - Started process (PID=2629) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:21:17.190+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:21:17.193+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:21:17.192+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:21:17.241+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:21:17.234+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:21:17.243+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:21:17.284+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.104 seconds
+[2025-01-09T05:21:48.150+0000] {processor.py:186} INFO - Started process (PID=2696) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:21:48.154+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:21:48.158+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:21:48.157+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:21:48.202+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:21:48.195+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:21:48.205+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:21:48.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.102 seconds
+[2025-01-09T05:22:19.242+0000] {processor.py:186} INFO - Started process (PID=2762) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:22:19.245+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:22:19.247+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:22:19.247+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:22:19.300+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:22:19.293+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:22:19.302+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:22:19.340+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.107 seconds
+[2025-01-09T05:22:50.062+0000] {processor.py:186} INFO - Started process (PID=2828) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:22:50.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:22:50.072+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:22:50.070+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:22:50.138+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:22:50.130+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:22:50.139+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:22:50.185+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.139 seconds
+[2025-01-09T05:23:20.989+0000] {processor.py:186} INFO - Started process (PID=2894) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:23:20.991+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:23:20.993+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:23:20.993+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:23:21.035+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:23:21.029+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:23:21.039+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:23:21.074+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.093 seconds
+[2025-01-09T05:23:51.201+0000] {processor.py:186} INFO - Started process (PID=2960) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:23:51.203+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:23:51.206+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:23:51.205+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:23:51.249+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:23:51.242+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:23:51.250+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:23:51.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.103 seconds
+[2025-01-09T05:24:21.376+0000] {processor.py:186} INFO - Started process (PID=3025) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:24:21.377+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:24:21.380+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:24:21.380+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:24:21.418+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:24:21.410+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:24:21.421+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:24:21.449+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.085 seconds
+[2025-01-09T05:24:52.209+0000] {processor.py:186} INFO - Started process (PID=3091) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:24:52.212+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:24:52.215+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:24:52.215+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:24:52.259+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:24:52.251+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:24:52.261+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:24:52.294+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.096 seconds
+[2025-01-09T05:25:22.718+0000] {processor.py:186} INFO - Started process (PID=3158) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:25:22.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:25:22.722+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:25:22.722+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:25:22.757+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:25:22.750+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:25:22.759+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:25:22.790+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.082 seconds
+[2025-01-09T05:25:53.028+0000] {processor.py:186} INFO - Started process (PID=3224) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:25:53.029+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:25:53.033+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:25:53.032+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:25:53.076+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:25:53.068+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:25:53.078+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:25:53.109+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.093 seconds
+[2025-01-09T05:26:23.889+0000] {processor.py:186} INFO - Started process (PID=3290) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:26:23.891+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:26:23.893+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:26:23.893+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:26:23.932+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:26:23.925+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:26:23.934+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:26:23.963+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.082 seconds
+[2025-01-09T05:26:54.982+0000] {processor.py:186} INFO - Started process (PID=3356) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:26:54.984+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:26:54.987+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:26:54.986+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:26:55.036+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:26:55.029+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:26:55.039+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:26:55.066+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.091 seconds
+[2025-01-09T05:27:25.176+0000] {processor.py:186} INFO - Started process (PID=3422) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:27:25.177+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:27:25.180+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:27:25.179+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:27:25.235+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:27:25.224+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:27:25.237+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:27:25.276+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.111 seconds
+[2025-01-09T05:27:55.484+0000] {processor.py:186} INFO - Started process (PID=3488) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:27:55.485+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:27:55.488+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:27:55.487+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:27:55.538+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:27:55.531+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:27:55.541+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:27:55.582+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.108 seconds
+[2025-01-09T05:28:25.841+0000] {processor.py:186} INFO - Started process (PID=3554) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:28:25.842+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:28:25.844+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:28:25.844+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:28:25.890+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:28:25.882+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:28:25.892+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:28:25.929+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.098 seconds
+[2025-01-09T05:28:56.582+0000] {processor.py:186} INFO - Started process (PID=3620) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:28:56.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:28:56.586+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:28:56.586+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:28:56.640+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:28:56.633+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:28:56.641+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:28:56.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.125 seconds
+[2025-01-09T05:29:27.519+0000] {processor.py:186} INFO - Started process (PID=3686) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:29:27.522+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:29:27.527+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:29:27.526+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:29:27.590+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:29:27.580+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:29:27.594+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:29:27.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.138 seconds
+[2025-01-09T05:29:57.768+0000] {processor.py:186} INFO - Started process (PID=3752) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:29:57.772+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:29:57.776+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:29:57.775+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:29:57.814+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:29:57.803+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:29:57.822+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:29:57.850+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.096 seconds
+[2025-01-09T05:30:29.978+0000] {processor.py:186} INFO - Started process (PID=3818) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:30:29.980+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:30:29.983+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:30:29.983+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:30:30.043+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:30:30.031+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:30:30.047+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:30:30.094+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.127 seconds
+[2025-01-09T05:31:00.399+0000] {processor.py:186} INFO - Started process (PID=3883) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:31:00.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:31:00.404+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:31:00.403+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:31:00.473+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:31:00.455+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:31:00.476+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:31:00.505+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.114 seconds
+[2025-01-09T05:31:30.901+0000] {processor.py:186} INFO - Started process (PID=3947) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:31:30.903+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:31:30.906+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:31:30.905+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:31:31.001+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:31:30.990+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:31:31.003+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:31:31.042+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.150 seconds
+[2025-01-09T05:32:01.628+0000] {processor.py:186} INFO - Started process (PID=4013) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:32:01.630+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:32:01.634+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:32:01.634+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:32:01.687+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:32:01.680+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:32:01.689+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:32:01.733+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.113 seconds
+[2025-01-09T05:32:32.065+0000] {processor.py:186} INFO - Started process (PID=4075) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:32:32.067+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:32:32.070+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:32:32.069+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:32:32.130+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:32:32.119+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:32:32.133+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:32:32.185+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.134 seconds
+[2025-01-09T05:33:02.598+0000] {processor.py:186} INFO - Started process (PID=4141) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:33:02.601+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:33:02.604+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:33:02.603+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:33:02.648+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:33:02.639+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:33:02.652+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:33:02.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.093 seconds
+[2025-01-09T05:33:32.851+0000] {processor.py:186} INFO - Started process (PID=4205) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:33:32.854+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:33:32.858+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:33:32.857+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:33:32.897+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:33:32.890+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:33:32.898+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:33:32.938+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.095 seconds
+[2025-01-09T05:34:02.999+0000] {processor.py:186} INFO - Started process (PID=4270) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:34:03.001+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:34:03.003+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:34:03.003+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:34:03.045+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:34:03.039+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:34:03.047+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:34:03.080+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.090 seconds
+[2025-01-09T05:34:33.898+0000] {processor.py:186} INFO - Started process (PID=4333) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:34:33.901+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:34:33.904+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:34:33.903+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:34:33.947+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:34:33.938+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:34:33.950+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:34:33.988+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.102 seconds
+[2025-01-09T05:35:06.478+0000] {processor.py:186} INFO - Started process (PID=4399) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:35:06.479+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:35:06.482+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:35:06.481+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:35:06.529+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:35:06.522+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:35:06.531+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:35:06.580+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.112 seconds
+[2025-01-09T05:35:37.209+0000] {processor.py:186} INFO - Started process (PID=4461) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:35:37.211+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T05:35:37.214+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:35:37.213+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:35:37.264+0000] {logging_mixin.py:190} INFO - [2025-01-09T05:35:37.256+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T05:35:37.266+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T05:35:37.301+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.105 seconds
+[2025-01-09T06:38:55.782+0000] {processor.py:186} INFO - Started process (PID=39) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:38:55.794+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:38:55.827+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:38:55.826+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:38:55.955+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:38:55.940+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:38:55.959+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:38:56.045+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.308 seconds
+[2025-01-09T06:39:26.876+0000] {processor.py:186} INFO - Started process (PID=105) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:39:26.877+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:39:26.882+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:39:26.881+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:39:26.930+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:39:26.921+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:39:26.933+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:39:26.977+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.109 seconds
+[2025-01-09T06:39:57.305+0000] {processor.py:186} INFO - Started process (PID=171) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:39:57.306+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:39:57.309+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:39:57.309+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:39:57.338+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:39:57.332+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:39:57.339+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:39:57.362+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.065 seconds
+[2025-01-09T06:40:28.070+0000] {processor.py:186} INFO - Started process (PID=237) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:40:28.071+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:40:28.074+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:40:28.074+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:40:28.108+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:40:28.102+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:40:28.110+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:40:28.135+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.073 seconds
+[2025-01-09T06:40:59.045+0000] {processor.py:186} INFO - Started process (PID=303) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:40:59.046+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:40:59.049+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:40:59.049+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:40:59.077+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:40:59.071+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:40:59.078+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:40:59.102+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.065 seconds
+[2025-01-09T06:41:29.995+0000] {processor.py:186} INFO - Started process (PID=369) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:41:29.996+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:41:29.999+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:41:29.999+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:41:30.029+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:41:30.024+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:41:30.030+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:41:30.052+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.065 seconds
+[2025-01-09T06:42:00.163+0000] {processor.py:186} INFO - Started process (PID=435) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:42:00.165+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:42:00.169+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:42:00.168+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:42:00.199+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:42:00.192+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:42:00.201+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:42:00.229+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.073 seconds
+[2025-01-09T06:42:30.434+0000] {processor.py:186} INFO - Started process (PID=501) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:42:30.436+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:42:30.440+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:42:30.439+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:42:30.470+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:42:30.465+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:42:30.471+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:42:30.496+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.070 seconds
+[2025-01-09T06:43:00.753+0000] {processor.py:186} INFO - Started process (PID=567) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:43:00.754+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:43:00.758+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:43:00.757+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:43:00.786+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:43:00.781+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:43:00.788+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:43:00.811+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.066 seconds
+[2025-01-09T06:43:31.233+0000] {processor.py:186} INFO - Started process (PID=633) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:43:31.234+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:43:31.238+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:43:31.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:43:31.272+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:43:31.266+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:43:31.273+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:43:31.299+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.075 seconds
+[2025-01-09T06:44:01.693+0000] {processor.py:186} INFO - Started process (PID=699) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:44:01.695+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:44:01.698+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:44:01.697+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:44:01.727+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:44:01.721+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:44:01.729+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:44:01.751+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.066 seconds
+[2025-01-09T06:44:32.023+0000] {processor.py:186} INFO - Started process (PID=765) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:44:32.024+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:44:32.030+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:44:32.029+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:44:32.069+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:44:32.063+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:44:32.072+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:44:32.101+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.085 seconds
+[2025-01-09T06:45:02.415+0000] {processor.py:186} INFO - Started process (PID=830) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:45:02.416+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:45:02.420+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:45:02.420+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:45:02.451+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:45:02.445+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:45:02.452+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:45:02.477+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.070 seconds
+[2025-01-09T06:45:32.691+0000] {processor.py:186} INFO - Started process (PID=896) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:45:32.692+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:45:32.697+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:45:32.696+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:45:32.727+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:45:32.721+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:45:32.729+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:45:32.755+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.072 seconds
+[2025-01-09T06:46:03.369+0000] {processor.py:186} INFO - Started process (PID=961) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:46:03.370+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:46:03.374+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:46:03.374+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:46:03.406+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:46:03.400+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:46:03.408+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:46:03.433+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.071 seconds
+[2025-01-09T06:46:34.134+0000] {processor.py:186} INFO - Started process (PID=1027) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:46:34.136+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:46:34.143+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:46:34.142+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:46:34.198+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:46:34.188+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:46:34.201+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:46:34.238+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.116 seconds
+[2025-01-09T06:47:04.665+0000] {processor.py:186} INFO - Started process (PID=1092) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:47:04.666+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:47:04.670+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:47:04.670+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:47:04.701+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:47:04.694+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:47:04.702+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:47:04.727+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.071 seconds
+[2025-01-09T06:47:34.929+0000] {processor.py:186} INFO - Started process (PID=1158) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:47:34.930+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:47:34.934+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:47:34.933+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:47:34.961+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:47:34.956+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:47:34.963+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:47:34.987+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.066 seconds
+[2025-01-09T06:48:05.751+0000] {processor.py:186} INFO - Started process (PID=1224) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:48:05.752+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:48:05.756+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:48:05.756+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:48:05.784+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:48:05.779+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:48:05.787+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:48:05.811+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.066 seconds
+[2025-01-09T06:48:36.523+0000] {processor.py:186} INFO - Started process (PID=1290) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:48:36.525+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:48:36.528+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:48:36.528+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:48:36.563+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:48:36.556+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:48:36.564+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:48:36.589+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.073 seconds
+[2025-01-09T06:49:06.701+0000] {processor.py:186} INFO - Started process (PID=1356) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:49:06.703+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:49:06.706+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:49:06.706+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:49:06.735+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:49:06.729+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:49:06.736+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:49:06.762+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.067 seconds
+[2025-01-09T06:49:36.894+0000] {processor.py:186} INFO - Started process (PID=1422) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:49:36.895+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:49:36.899+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:49:36.898+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:49:36.926+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:49:36.921+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:49:36.928+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:49:36.952+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.065 seconds
+[2025-01-09T06:50:07.728+0000] {processor.py:186} INFO - Started process (PID=1488) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:50:07.729+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:50:07.732+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:50:07.732+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:50:07.761+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:50:07.755+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:50:07.763+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:50:07.788+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.067 seconds
+[2025-01-09T06:50:38.494+0000] {processor.py:186} INFO - Started process (PID=1554) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:50:38.499+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:50:38.504+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:50:38.503+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:50:38.553+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:50:38.544+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:50:38.557+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:50:38.644+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/local_to_gcs.py took 0.159 seconds
+[2025-01-09T06:51:09.442+0000] {processor.py:186} INFO - Started process (PID=1620) to work on /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:51:09.471+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/local_to_gcs.py for tasks to queue
+[2025-01-09T06:51:09.503+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:51:09.502+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:51:09.813+0000] {logging_mixin.py:190} INFO - [2025-01-09T06:51:09.785+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/local_to_gcs.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/local_to_gcs.py", line 66, in <module>
+    retail_dag = retail()  # Instantiate the DAG
+                 ^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4307, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/local_to_gcs.py", line 31, in retail
+    csv_files = [f for f in os.listdir(dataset_folder) if f.endswith(".csv")]
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'include/dataset/'
+[2025-01-09T06:51:09.815+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/local_to_gcs.py
+[2025-01-09T06:51:09.822+0000] {processor.py:211} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "postgres" (172.28.0.3), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 207, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 188, in _handle_dag_file_processing
+    result: tuple[int, int, int] = dag_file_processor.process_file(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 928, in process_file
+    DagFileProcessor.update_import_errors(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 648, in update_import_errors
+    existing_import_error_files = [x.filename for x in session.query(ParseImportError.filename).all()]
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.28.0.3), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

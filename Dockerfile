@@ -14,13 +14,15 @@ RUN apt-get update && apt-get install -y \
 # Switch back to the airflow user
 USER astro
 
-# Create and activate a virtual environment, then install dependencies
-RUN python -m venv /home/astro/soda_venv && \
-    /home/astro/soda_venv/bin/pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    /home/astro/soda_venv/bin/pip install --no-cache-dir numpy && \
-    /home/astro/soda_venv/bin/pip install --no-cache-dir pandas==1.5.3 && \
-    /home/astro/soda_venv/bin/pip install --no-cache-dir soda-core-bigquery==3.0.45 && \
-    /home/astro/soda_venv/bin/pip install --no-cache-dir soda-core-scientific==3.0.45
+# # Create and activate a virtual environment, then install dependencies
+# RUN python -m venv /home/astro/soda_venv && \
+#     /home/astro/soda_venv/bin/pip install --no-cache-dir soda-core-bigquery==3.0.45 && \
+#     /home/astro/soda_venv/bin/pip install --no-cache-dir soda-core-scientific==3.0.45
 
-# Set the virtual environment as the default Python environment
-ENV PATH="/home/astro/soda_venv/bin:$PATH"
+# # Set the virtual environment as the default Python environment
+# ENV PATH="/home/astro/soda_venv/bin:$PATH"
+
+# install soda into a virtual environment
+RUN python -m venv soda_venv && source soda_venv/bin/activate && \
+    pip install --no-cache-dir soda-core-bigquery==3.0.45 &&\
+    pip install --no-cache-dir soda-core-scientific==3.0.45 && deactivate

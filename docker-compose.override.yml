@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_UI_PORT=8081  # Change Spark Web UI port to 8081
+    ports:
+      - "7077:7077"  # Spark master port
+      - "8081:8081"  # Spark Web UI port
+    networks:
+      - airflow
+
+  spark-worker:
+    image: bitnami/spark:latest
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_UI_PORT=8082  # Change Spark Worker Web UI port to 8082
+    depends_on:
+      - spark-master
+    ports:
+      - "8082:8082"  # Spark Worker Web UI port
+    networks:
+      - airflow
+
+networks:
+  airflow:
+    name: astro_dev_network  # Use the default network created by Astronomer

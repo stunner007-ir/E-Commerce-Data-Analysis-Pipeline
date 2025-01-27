@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 # Define default arguments
 default_args = {
-    "start_date": datetime(2023, 1, 1),
+    "start_date": datetime(2025, 1, 1),
     "catchup": False,
 }
 

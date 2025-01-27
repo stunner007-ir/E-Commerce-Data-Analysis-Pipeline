@@ -1,135 +1,164 @@
 from airflow import DAG
-from airflow.decorators import dag, task
-from airflow.providers.google.cloud.operators.gcs import GCSListObjectsOperator
-from airflow.providers.google.cloud.operators.bigquery import BigQueryCheckOperator, BigQueryCreateEmptyDatasetOperator
+from airflow.operators.python import PythonOperator
+from google.cloud import storage
+from google.cloud import bigquery
+import pandas as pd
 from datetime import datetime
-import logging
 import os
-from dotenv import load_dotenv
+import io
+import logging
 
-# Load environment variables from .env file
-load_dotenv()
+# Fetch environment variables
+BUCKET_NAME = os.getenv("BUCKET_NAME")  # GCS bucket name
+GCP_CONN_ID = os.getenv("GCP_CONN_ID")  # Airflow GCP connection ID
+BQ_PROJECT_ID = os.getenv("BQ_PROJECT_ID")  # BigQuery project ID
+BQ_DATASET_NAME = "ecommerce"  # BigQuery dataset name
+BQ_TABLE_NAME = "csv_row_count_table"  # BigQuery table name
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Define the schema
+SCHEMA_FIELDS = [
+    {'name': 'table_name', 'type': 'STRING', 'mode': 'REQUIRED'},
+    {'name': 'source_rc', 'type': 'INTEGER', 'mode': 'REQUIRED'},
+    {'name': 'target_rc', 'type': 'INTEGER', 'mode': 'REQUIRED'},
+    {'name': 'date', 'type': 'DATE', 'mode': 'REQUIRED'},
+    {'name': 'timestamp', 'type': 'TIMESTAMP', 'mode': 'REQUIRED'},
+    {'name': 'difference', 'type': 'INTEGER', 'mode': 'REQUIRED'},
+]
 
-# Define default arguments
+# Define the DAG's default arguments
 default_args = {
-    "start_date": datetime(2023, 1, 1),
-    "catchup": False,
+    'owner': 'airflow',
+    'retries': 1,
+    'start_date': datetime(2025, 1, 1),
 }
 
-bucket_name = os.getenv("BUCKET_NAME")
-gcp_conn_id = os.getenv("GCP_CONN_ID")
-dataset_id = "ecommerce"
-bq_project_id = os.getenv("BQ_PROJECT_ID")
-quality_check_dataset_id = "data_quality_check"
-
-# Define the path to the SQL files
-SQL_PATH = '/usr/local/airflow/include/sql'
-
-@dag(
-    dag_id="data_quality_checks",
+with DAG(
+    'process_csv_to_bq',
     default_args=default_args,
-    schedule_interval=None,  # No schedule, manual trigger
-    tags=["example"],
-)
-def data_quality_checks_pipeline():
-    """
-    A DAG to run data quality checks on tables in BigQuery based on CSV files already uploaded.
-    """
+    description='DAG to process CSV files from GCS and store row count in BigQuery',
+    schedule_interval=None,  # Change as needed (e.g., '0 0 * * *' for daily)
+    catchup=False,
+) as dag:
 
-    # Task to create the dataset if it doesn't exist
-    create_dataset = BigQueryCreateEmptyDatasetOperator(
-        task_id="create_dataset",
-        dataset_id=quality_check_dataset_id,
-        gcp_conn_id=gcp_conn_id,
-        location="US",
-    )
-    
-    # Task to list all objects in the GCS bucket under the 'raw/' folder (runs only once)
-    list_files = GCSListObjectsOperator(
-        task_id="list_files",
-        bucket=bucket_name,
-        prefix="raw/",  # List files in the 'raw/' folder
-        gcp_conn_id=gcp_conn_id,
-    )
-    logger.info("Listing files in the bucket...")
+    # GCS path to the raw folder
+    gcs_path = "gs://ecommerce_data_stunner007/raw/"
 
-    # Task to process the list of files
-    @task
-    def process_files(file_list):
-        """
-        Filter the list of files to include only CSV files.
-        """
-        logger.info(f"Raw file list from GCS: {file_list}")
-        csv_files = [file for file in file_list if file.endswith(".csv")]
-        logger.info(f"Filtered CSV files: {csv_files}")
+    # Task to create the BigQuery table if it doesn't exist
+    def create_bq_table():
+        logging.info("Creating BigQuery table if it doesn't exist")
+        client = bigquery.Client(project=BQ_PROJECT_ID)
+        dataset_ref = client.dataset(BQ_DATASET_NAME)
+        table_ref = dataset_ref.table(BQ_TABLE_NAME)
+        
+        schema = [bigquery.SchemaField(field['name'], field['type'], mode=field['mode']) for field in SCHEMA_FIELDS]
+        
+        table = bigquery.Table(table_ref, schema=schema)
+        try:
+            client.get_table(table_ref)
+            logging.info("Table already exists")
+        except Exception:
+            client.create_table(table)
+            logging.info("Table created")
+
+    create_table_task = PythonOperator(
+        task_id='create_table_task',
+        python_callable=create_bq_table,
+    )
+
+    # Task to list all CSV files in the GCS path
+    def list_csv_files():
+        logging.info("Pass 1: Listing CSV files")
+        client = storage.Client()
+        bucket = client.get_bucket(BUCKET_NAME)
+        blobs = bucket.list_blobs(prefix=gcs_path.replace("gs://", "").replace(BUCKET_NAME + "/", ""))
+        csv_files = [blob.name for blob in blobs if blob.name.endswith('.csv')]
+        logging.info(f"Pass 1: Found {len(csv_files)} CSV files")
         return csv_files
 
-    # Dynamically map BigQueryCheckOperator tasks for each CSV file
-    csv_files = process_files(list_files.output)
-
-    def generate_check_sql(file_name):
-        # Extract table name from the file name (assuming the file name corresponds to the table name)
-        table_name = file_name.split('/')[-1].replace('.csv', '')
-        
-        # Fully qualify the table name with project and dataset
-        fully_qualified_table_name = f"`{bq_project_id}.{dataset_id}.{table_name}`"
-        
-        # Load the SQL template
-        with open(os.path.join(SQL_PATH, 'check_nulls.sql'), 'r') as sql_file:
-            check_nulls_sql = sql_file.read()
-        
-        # Replace placeholders with actual values for table_name, project_id, and dataset_id
-        check_nulls_sql = check_nulls_sql.replace('{table_name}', table_name)  # Replace alias in SELECT
-        check_nulls_sql = check_nulls_sql.replace('{project_id}', bq_project_id)  # Replace project_id
-        check_nulls_sql = check_nulls_sql.replace('{dataset_id}', dataset_id)  # Replace dataset_id
-        check_nulls_sql = check_nulls_sql.replace('{project_id}.{dataset_id}.{table_name}', fully_qualified_table_name)  # Replace table reference in FROM
-
-        return check_nulls_sql
-
-    # Run the data quality check using BigQueryCheckOperator
-    check_data_quality = BigQueryCheckOperator.partial(
-        task_id="check_data_quality",
-        use_legacy_sql=False,
-        gcp_conn_id=gcp_conn_id,
-    ).expand(
-        sql=csv_files.map(generate_check_sql)
+    list_files_task = PythonOperator(
+        task_id='list_files_task',
+        python_callable=list_csv_files,
     )
 
-    def generate_schema_check_sql(file_name):
-        """
-        Load the schema check SQL file and replace placeholders with actual values.
-        """
-        table_name = file_name.split('/')[-1].replace('.sql', '')
-        fully_qualified_table_name = f"`{bq_project_id}.{dataset_id}.{table_name}`"
-        
-        # Load the SQL template
-        with open(os.path.join(SQL_PATH, f'schema/{file_name.split('/')[-1].replace('.csv', '.sql')}'), 'r') as sql_file:
-            schema_check_sql = sql_file.read()
-        
-        # Replace placeholders with actual values for table_name, project_id, and dataset_id
-        schema_check_sql = schema_check_sql.replace('{table_name}', table_name)  # Replace alias in SELECT
-        schema_check_sql = schema_check_sql.replace('{project_id}', bq_project_id)  # Replace project_id
-        schema_check_sql = schema_check_sql.replace('{dataset_id}', dataset_id)  # Replace dataset_id
-        schema_check_sql = schema_check_sql.replace('{project_id}.{dataset_id}.{table_name}', fully_qualified_table_name)  # Replace table reference in FROM
+    # Function to get row count from BigQuery
+    def get_bq_row_count(table_name):
+        client = bigquery.Client(project=BQ_PROJECT_ID)
+        query = f"SELECT COUNT(*) as row_count FROM `{BQ_PROJECT_ID}.{BQ_DATASET_NAME}.{table_name}`"
+        query_job = client.query(query)
+        results = query_job.result()
+        for row in results:
+            return row.row_count
 
-        return schema_check_sql
+    # Task to process each CSV file
+    def process_csv_file(blob_name):
+        logging.info(f"Pass 2: Processing file {blob_name}")
+        client = storage.Client()
+        bucket = client.get_bucket(BUCKET_NAME)
+        blob = bucket.blob(blob_name)
+        
+        # Read the file into a pandas DataFrame
+        file_content = blob.download_as_text(encoding='ISO-8859-1')
+        df = pd.read_csv(io.StringIO(file_content))
+        
+        # Row count calculations
+        source_rc = len(df)  # Number of rows in the CSV file
+        table_name = blob_name.split('/')[-1].replace('.csv', '')  # Extract table name from file name
+        target_rc = get_bq_row_count(table_name)  # Get row count from BigQuery
+        difference = source_rc - target_rc
+        
+        # Get current date and timestamp
+        current_date = datetime.now().date()
+        current_timestamp = datetime.now()
+        
+        # Prepare data for BigQuery insert
+        data = {
+            'table_name': blob_name.split('/')[-1],  # Extract file name from path
+            'source_rc': source_rc,
+            'target_rc': target_rc,
+            'date': current_date.isoformat(),  # Convert date to string
+            'timestamp': current_timestamp.isoformat(),  # Convert timestamp to string
+            'difference': difference,
+        }
 
-    # Run the schema checks using BigQueryCheckOperator
-    run_schema_checks = BigQueryCheckOperator.partial(
-        task_id="run_schema_checks",
-        use_legacy_sql=False,
-        gcp_conn_id=gcp_conn_id,
-    ).expand(
-        sql=csv_files.map(generate_schema_check_sql)
+        logging.info(f"Pass 2: Processed file {blob_name} with {source_rc} rows and target {target_rc} rows")
+        return data
+
+    def process_files(**context):
+        logging.info("Pass 3: Processing all files")
+        csv_files = context['task_instance'].xcom_pull(task_ids='list_files_task')
+        for csv_file in csv_files:
+            row_count_data = process_csv_file(csv_file)
+            context['task_instance'].xcom_push(key=csv_file, value=row_count_data)
+        logging.info("Pass 3: Completed processing all files")
+
+    process_files_task = PythonOperator(
+        task_id='process_files_task',
+        python_callable=process_files,
+        provide_context=True,
     )
 
-    # Define task dependencies
-    create_dataset >> list_files >> csv_files >> check_data_quality >> run_schema_checks
+    # Task to insert the row count data into BigQuery
+    def insert_to_bigquery(**context):
+        logging.info("Pass 4: Inserting data into BigQuery")
+        csv_files = context['task_instance'].xcom_pull(task_ids='list_files_task')
+        for csv_file in csv_files:
+            row_count_data = context['task_instance'].xcom_pull(task_ids='process_files_task', key=csv_file)
+            if row_count_data:
+                logging.info(f"Pass 4: Inserting data for file {csv_file}")
+                client = bigquery.Client(project=BQ_PROJECT_ID)
+                table_ref = client.dataset(BQ_DATASET_NAME).table(BQ_TABLE_NAME)
+                errors = client.insert_rows_json(table_ref, [row_count_data])  # Insert a single row
+                if errors:
+                    logging.error(f"Pass 4: Error inserting rows into BigQuery: {errors}")
+                    raise Exception(f"Error inserting rows into BigQuery: {errors}")
+                logging.info(f"Pass 4: Successfully inserted data for file {csv_file}")
+        logging.info("Pass 4: Completed inserting data into BigQuery")
 
+    insert_to_bq_task = PythonOperator(
+        task_id='insert_to_bq_task',
+        python_callable=insert_to_bigquery,
+        provide_context=True,
+    )
 
-# Instantiate the DAG
-data_quality_checks_dag = data_quality_checks_pipeline()
+    # Define the task flow
+    create_table_task >> list_files_task >> process_files_task >> insert_to_bq_task

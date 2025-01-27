@@ -3,5 +3,6 @@
 apache-airflow-providers-google
 python-dotenv
 google-cloud-container
-soda-core-bigquery
-pyspark
+google-cloud-storage
+google-cloud-bigquery
+pandas

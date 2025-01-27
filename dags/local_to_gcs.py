@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 @dag(
-    start_date=datetime(2023, 1, 1),
+    start_date=datetime(2025, 1, 1),
     schedule_interval=None,  # Use schedule_interval instead of schedule
     catchup=False,
     tags=["retail"],

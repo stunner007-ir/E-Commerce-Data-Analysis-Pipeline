@@ -99,35 +99,36 @@ def data_quality_checks_pipeline():
         sql=csv_files.map(generate_check_sql)
     )
 
-    def generate_trans_dim_sql():
+    def generate_schema_check_sql(file_name):
         """
-        Load the trans_dim.sql file and replace placeholders with actual values.
+        Load the schema check SQL file and replace placeholders with actual values.
         """
-        table_name = "Trans_dim"
+        table_name = file_name.split('/')[-1].replace('.sql', '')
         fully_qualified_table_name = f"`{bq_project_id}.{dataset_id}.{table_name}`"
         
         # Load the SQL template
-        with open(os.path.join(SQL_PATH, 'schema/trans_dim.sql'), 'r') as sql_file:
-            trans_dim_sql = sql_file.read()
+        with open(os.path.join(SQL_PATH, f'schema/{file_name.split('/')[-1].replace('.csv', '.sql')}'), 'r') as sql_file:
+            schema_check_sql = sql_file.read()
         
         # Replace placeholders with actual values for table_name, project_id, and dataset_id
-        trans_dim_sql = trans_dim_sql.replace('{table_name}', table_name)  # Replace alias in SELECT
-        trans_dim_sql = trans_dim_sql.replace('{project_id}', bq_project_id)  # Replace project_id
-        trans_dim_sql = trans_dim_sql.replace('{dataset_id}', dataset_id)  # Replace dataset_id
-        trans_dim_sql = trans_dim_sql.replace('{project_id}.{dataset_id}.{table_name}', fully_qualified_table_name)  # Replace table reference in FROM
+        schema_check_sql = schema_check_sql.replace('{table_name}', table_name)  # Replace alias in SELECT
+        schema_check_sql = schema_check_sql.replace('{project_id}', bq_project_id)  # Replace project_id
+        schema_check_sql = schema_check_sql.replace('{dataset_id}', dataset_id)  # Replace dataset_id
+        schema_check_sql = schema_check_sql.replace('{project_id}.{dataset_id}.{table_name}', fully_qualified_table_name)  # Replace table reference in FROM
 
-        return trans_dim_sql
+        return schema_check_sql
 
-    # Task to run the trans_dim.sql script
-    run_trans_dim_sql = BigQueryCheckOperator(
-        task_id="run_trans_dim_sql",
-        sql=generate_trans_dim_sql(),
+    # Run the schema checks using BigQueryCheckOperator
+    run_schema_checks = BigQueryCheckOperator.partial(
+        task_id="run_schema_checks",
         use_legacy_sql=False,
         gcp_conn_id=gcp_conn_id,
+    ).expand(
+        sql=csv_files.map(generate_schema_check_sql)
     )
 
     # Define task dependencies
-    create_dataset >> list_files >> csv_files >> check_data_quality >> run_trans_dim_sql
+    create_dataset >> list_files >> csv_files >> check_data_quality >> run_schema_checks
 
 
 # Instantiate the DAG

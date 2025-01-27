@@ -1,12 +1,8 @@
 from airflow import DAG
 from airflow.decorators import dag, task
-from airflow.providers.google.cloud.transfers.gcs_to_bigquery import (
-    GCSToBigQueryOperator,
-)
+from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from airflow.providers.google.cloud.operators.gcs import GCSListObjectsOperator
-from airflow.providers.google.cloud.operators.bigquery import (
-    BigQueryCreateEmptyDatasetOperator,
-)
+from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 from datetime import datetime
 import logging
 import os
@@ -30,16 +26,25 @@ gcp_conn_id = os.getenv("GCP_CONN_ID")
 dataset_id = "ecommerce"
 bq_project_id = os.getenv("BQ_PROJECT_ID")
 
+# Mapping of file names to table names
+file_to_table_mapping = {
+    "Trans_dim.csv": "Trans_dim",
+    "customer_dim.csv": "customer_dim",
+    "fact_table.csv": "fact_table",
+    "item_dim.csv": "item_dim",
+    "store_dim.csv": "store_dim",
+    "time_dim.csv": "time_dim",
+}
 
 @dag(
-    dag_id="gcs_to_bigquery",
+    dag_id="gcs_to_bigquery_sequential",
     default_args=default_args,
     schedule_interval=None,  # No schedule, manual trigger
     tags=["example"],
 )
-def gcs_to_bigquery_pipeline():
+def gcs_to_bigquery_pipeline_sequential():
     """
-    A DAG to load CSV files from GCS to BigQuery with schema autodetection.
+    A DAG to load CSV files from GCS to BigQuery sequentially.
     """
 
     # Task to create the BigQuery dataset (runs only once at the start)
@@ -72,31 +77,41 @@ def gcs_to_bigquery_pipeline():
         logger.info(f"Filtered CSV files: {csv_files}")
         return csv_files
 
-    # Dynamically map GCSToBigQueryOperator tasks for each CSV file
+    # Task to upload a single file to BigQuery
+    def upload_to_bigquery(file_name):
+        """
+        Upload a single file to BigQuery.
+        """
+        table_name = file_to_table_mapping.get(file_name.split('/')[-1], 'unknown_table')
+        return GCSToBigQueryOperator(
+            task_id=f"load_{table_name}",
+            gcp_conn_id=gcp_conn_id,
+            bucket=bucket_name,
+            source_objects=[f"raw/{file_name}"],
+            destination_project_dataset_table=f"{bq_project_id}.{dataset_id}.{table_name}",
+            source_format="csv",
+            skip_leading_rows=1,
+            write_disposition="WRITE_TRUNCATE",
+            create_disposition="CREATE_IF_NEEDED",
+            max_bad_records=10,
+            autodetect=True,
+            ignore_unknown_values=True,
+            location="US",
+        )
+
+    # Define the DAG structure
+    create_retail_dataset >> list_files
+
+    # Process the list of files
     csv_files = process_files(list_files.output)
+    previous_task = csv_files
 
-    load_to_bigquery = GCSToBigQueryOperator.partial(
-        task_id="load_to_bigquery",
-        gcp_conn_id=gcp_conn_id,  # Google Cloud connection ID
-        bucket=bucket_name,  # GCS bucket name
-        source_format="CSV",  # Source file format
-        skip_leading_rows=1,  # Skip the header row
-        write_disposition="WRITE_TRUNCATE",  # Overwrite the table if it exists
-        create_disposition="CREATE_IF_NEEDED",  # Create the table if it doesn't exist
-        autodetect=True,  # Enable schema autodetection
-        max_bad_records=10,  # Allow up to 10 bad records before failing
-        ignore_unknown_values=True,  # Ignore unknown values in the CSV file
-        location="US",  # BigQuery dataset location
-    ).expand(
-        source_objects=csv_files.map(lambda file_name: [file_name]),
-        destination_project_dataset_table=csv_files.map(
-            lambda file_name: f"{bq_project_id}.{dataset_id}.{file_name.split('/')[-1].replace('.csv', '')}"
-        ),
-    )
-
-    # Define task dependencies
-    create_retail_dataset >> list_files >> csv_files >> load_to_bigquery
+    # Sequentially create upload tasks for each file
+    for file_name in file_to_table_mapping.keys():
+        upload_task = upload_to_bigquery(file_name)
+        previous_task >> upload_task
+        previous_task = upload_task
 
 
 # Instantiate the DAG
-gcs_to_bigquery_dag = gcs_to_bigquery_pipeline()
+gcs_to_bigquery_dag_sequential = gcs_to_bigquery_pipeline_sequential()

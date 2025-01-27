@@ -2,11 +2,14 @@
 
 This project implements an end-to-end data analysis pipeline for e-commerce data. The pipeline involves downloading data from Kaggle, uploading it to Google Cloud Storage (GCS), and loading it into BigQuery for further analysis. Apache Airflow is used for orchestration, and the project is initialized using Astronomer.
 
+Additionally, the project includes data quality checks implemented using SQL, which are orchestrated by an Airflow DAG. The results of these checks are stored in GCS for further review.
+
 ## Project Overview
 
 1. **Download Data**: E-commerce data is downloaded from Kaggle to the local machine.
 2. **Upload to GCS**: A DAG (Directed Acyclic Graph) in Apache Airflow uploads the data from the local machine to Google Cloud Storage.
 3. **Load to BigQuery**: Another DAG in Apache Airflow loads the data from GCS to BigQuery for analysis.
+4. **Data Quality Checks**: SQL-based data quality checks are implemented and orchestrated by an Airflow DAG. The results of these checks are stored in GCS.
 
 ## Prerequisites
 
@@ -97,7 +100,32 @@ Open your web browser and go to http://localhost:8080.
 
 - Use the displayed path (e.g., /usr/local/airflow/include/gcp/service_account.json) in your Airflow configuration.
 
-### 4. Trigger the DAGs from the Airflow UI to upload data to GCS and load it into BigQuery.
+### 4. Trigger the DAGs
+1. **Upload Data to GCS**: Trigger the DAG to upload data from your local machine to GCS.
+
+2. **Load Data to BigQuery**: Trigger the DAG to load data from GCS to BigQuery.
+
+3. **Run Data Quality Checks**: Trigger the DAG to execute all SQL-based data quality checks.
+The results of the checks will be stored in GCS.
+
+
+## Data Quality Checks (SQL-Based Checks)
+The following SQL-based data quality checks are implemented:
+
+**Schema Validation**: Ensures the table structure matches the expected schema.
+
+**Completeness Check**: Ensures no mandatory fields are missing.
+
+**Uniqueness Check**: Detects duplicate records.
+
+**Null Value Check**: Identifies and handles null values in critical fields.
+
+**Consistency Check**: Validates data against business rules.
+
+**Timeliness Check**: Ensures data is ingested on time.
+
+**Airflow DAG for Data Quality Checks**: A dedicated Airflow DAG orchestrates the execution of all SQL checks.
+The results of the checks are written to a CSV file and stored in GCS for further review.
 
 ### License
 

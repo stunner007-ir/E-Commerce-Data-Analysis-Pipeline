@@ -1,4 +1,4 @@
-﻿payment_key,trans_type,bank_name
+payment_key,trans_type,bank_name
 P001,cash,None
 P002,card,AB Bank Limited
 P003,card,Bangladesh Commerce Bank Limited

@@ -1,12 +1,14 @@
 from airflow import DAG
 from airflow.decorators import dag, task
-from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
+from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator, BigQueryInsertJobOperator
 from airflow.providers.google.cloud.operators.gcs import GCSListObjectsOperator
-from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
+from google.cloud import storage
+import pandas as pd
 from datetime import datetime
 import logging
 import os
 from dotenv import load_dotenv
+import io
 
 # Load environment variables from .env file
 load_dotenv()
@@ -77,27 +79,33 @@ def gcs_to_bigquery_pipeline_sequential():
         logger.info(f"Filtered CSV files: {csv_files}")
         return csv_files
 
-    # Task to upload a single file to BigQuery
+    # Task to upload a single file to BigQuery using Pandas
+    @task
     def upload_to_bigquery(file_name):
         """
-        Upload a single file to BigQuery.
+        Upload a single file to BigQuery using Pandas.
         """
         table_name = file_to_table_mapping.get(file_name.split('/')[-1], 'unknown_table')
-        return GCSToBigQueryOperator(
-            task_id=f"load_{table_name}",
-            gcp_conn_id=gcp_conn_id,
-            bucket=bucket_name,
-            source_objects=[f"raw/{file_name}"],
-            destination_project_dataset_table=f"{bq_project_id}.{dataset_id}.{table_name}",
-            source_format="csv",
-            skip_leading_rows=1,
-            write_disposition="WRITE_TRUNCATE",
-            create_disposition="CREATE_IF_NEEDED",
-            max_bad_records=10,
-            autodetect=True,
-            ignore_unknown_values=True,
-            location="US",
+        
+        # Initialize GCS client
+        client = storage.Client()
+        bucket = client.get_bucket(bucket_name)
+        blob = bucket.blob(f"raw/{file_name}")
+        
+        # Download the CSV file content
+        content = blob.download_as_text(encoding='ISO-8859-1')
+        
+        # Read the CSV file into a Pandas DataFrame
+        df = pd.read_csv(io.StringIO(content))
+        
+        # Upload the DataFrame to BigQuery
+        df.to_gbq(
+            destination_table=f"{dataset_id}.{table_name}",
+            project_id=bq_project_id,
+            if_exists="replace",
+            table_schema=None,  # Automatically infer schema
         )
+        logger.info(f"Uploaded {file_name} to BigQuery table {table_name}")
 
     # Define the DAG structure
     create_retail_dataset >> list_files

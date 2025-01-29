@@ -1,6 +1,8 @@
 from airflow import DAG
 from airflow.decorators import dag, task
-from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
+from airflow.providers.google.cloud.operators.bigquery import (
+    BigQueryCreateEmptyDatasetOperator,
+)
 from google.cloud import bigquery
 import pandas as pd
 from datetime import datetime
@@ -35,8 +37,9 @@ table_to_transformation_script = {
     "item_dim": "item_dim",
     "Trans_dim": "Trans_dim",
     "time_dim": "time_dim",
-    "store_dim": "store_dim"
+    "store_dim": "store_dim",
 }
+
 
 @dag(
     dag_id="feature_engineering",
@@ -66,42 +69,44 @@ def feature_engineering_pipeline():
         Perform feature engineering on the BigQuery tables.
         """
         client = bigquery.Client(project=bq_project_id)
-        
+
         # Add the include folder to the Python path
-        sys.path.append(os.path.join(os.path.dirname(__file__), '../include'))
-        
+        sys.path.append(os.path.join(os.path.dirname(__file__), "../include"))
+
         for table_name, module_name in table_to_transformation_script.items():
             # Read data from BigQuery
             query = f"SELECT * FROM `{bq_project_id}.{source_dataset_id}.{table_name}`"
             query_job = client.query(query)
             results = query_job.result()
             df = results.to_dataframe()
-            
+
             if df is None or df.empty:
                 logger.warning(f"No data found for table {table_name}")
                 continue
-            
+
             # Log the first few rows of the DataFrame
             logger.info(f"First few rows of {table_name}:\n{df.head()}")
-            
+
             # Dynamically import the transformation module
             try:
-                transform_module = importlib.import_module(f"transformations.{module_name}")
+                transform_module = importlib.import_module(
+                    f"transformations.{module_name}"
+                )
             except ImportError as e:
                 logger.error(f"Error importing module {module_name}: {e}")
                 continue
-            
+
             # Perform the transformation
             try:
                 transformed_df = transform_module.transform(df)
             except Exception as e:
                 logger.error(f"Error transforming data for table {table_name}: {e}")
                 continue
-            
+
             if transformed_df is None or transformed_df.empty:
                 logger.warning(f"Transformed data for table {table_name} is empty")
                 continue
-            
+
             # Write the transformed data back to BigQuery
             try:
                 transformed_df.to_gbq(
@@ -109,9 +114,13 @@ def feature_engineering_pipeline():
                     project_id=bq_project_id,
                     if_exists="replace",
                 )
-                logger.info(f"Feature engineering completed for {table_name} and data uploaded to BigQuery")
+                logger.info(
+                    f"Feature engineering completed for {table_name} and data uploaded to BigQuery"
+                )
             except Exception as e:
-                logger.error(f"Error uploading transformed data for table {table_name} to BigQuery: {e}")
+                logger.error(
+                    f"Error uploading transformed data for table {table_name} to BigQuery: {e}"
+                )
 
     # Define the DAG structure
     create_transformed_dataset >> feature_engineering()

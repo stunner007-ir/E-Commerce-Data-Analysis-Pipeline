@@ -1,6 +1,9 @@
 from airflow import DAG
 from airflow.decorators import dag, task
-from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator, BigQueryInsertJobOperator
+from airflow.providers.google.cloud.operators.bigquery import (
+    BigQueryCreateEmptyDatasetOperator,
+    BigQueryInsertJobOperator,
+)
 from airflow.providers.google.cloud.operators.gcs import GCSListObjectsOperator
 from google.cloud import storage
 import pandas as pd
@@ -37,6 +40,7 @@ file_to_table_mapping = {
     "store_dim.csv": "store_dim",
     "time_dim.csv": "time_dim",
 }
+
 
 @dag(
     dag_id="gcs_to_bigquery_sequential",
@@ -85,19 +89,21 @@ def gcs_to_bigquery_pipeline_sequential():
         """
         Upload a single file to BigQuery using Pandas.
         """
-        table_name = file_to_table_mapping.get(file_name.split('/')[-1], 'unknown_table')
-        
+        table_name = file_to_table_mapping.get(
+            file_name.split("/")[-1], "unknown_table"
+        )
+
         # Initialize GCS client
         client = storage.Client()
         bucket = client.get_bucket(bucket_name)
         blob = bucket.blob(f"raw/{file_name}")
-        
+
         # Download the CSV file content
-        content = blob.download_as_text(encoding='ISO-8859-1')
-        
+        content = blob.download_as_text(encoding="ISO-8859-1")
+
         # Read the CSV file into a Pandas DataFrame
         df = pd.read_csv(io.StringIO(content))
-        
+
         # Upload the DataFrame to BigQuery
         df.to_gbq(
             destination_table=f"{dataset_id}.{table_name}",

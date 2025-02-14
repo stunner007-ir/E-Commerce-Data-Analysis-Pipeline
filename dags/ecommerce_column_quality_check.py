@@ -226,7 +226,7 @@ default_args = {
 }
 
 with DAG(
-    "data_quality_checks_multiple",
+    "ecommerce_column_quality_check",
     default_args=default_args,
     schedule_interval="@daily",
     catchup=False,

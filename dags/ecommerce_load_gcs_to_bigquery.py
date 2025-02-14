@@ -43,7 +43,7 @@ file_to_table_mapping = {
 
 
 @dag(
-    dag_id="gcs_to_bigquery_sequential",
+    dag_id="ecommerce_load_gcs_to_bigquery",
     default_args=default_args,
     schedule_interval=None,  # No schedule, manual trigger
     tags=["example"],

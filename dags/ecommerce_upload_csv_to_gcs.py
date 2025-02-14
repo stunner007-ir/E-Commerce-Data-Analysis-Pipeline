@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
     schedule_interval=None,  # Use schedule_interval instead of schedule
     catchup=False,
     tags=["retail"],
-    dag_id="local_to_gcs",
+    dag_id="ecommerce_upload_csv_to_gcs",
 )
 def retail():
     dataset_folder = "include/dataset/"

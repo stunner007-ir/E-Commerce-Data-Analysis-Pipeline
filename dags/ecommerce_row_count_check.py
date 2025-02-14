@@ -40,7 +40,7 @@ default_args = {
 
 # Initialize the DAG
 with DAG(
-    "row_count_dag",
+    "ecommerce_row_count_check",
     default_args=default_args,
     description="DAG to process CSV files from GCS and store row count in BigQuery",
     schedule_interval=None,

@@ -1,15 +1,15 @@
-# E-Commerce Data Analysis Pipeline
+# Smart Data Warehouse with Automated ETL: E-Commerce Data Analysis Pipeline
 
-This project implements an end-to-end data analysis pipeline for e-commerce data. The pipeline involves downloading data from Kaggle, uploading it to Google Cloud Storage (GCS), and loading it into BigQuery for further analysis. Apache Airflow is used for orchestration, and the project is initialized using Astronomer.
-
-Additionally, the project includes data quality checks implemented using SQL, which are orchestrated by an Airflow DAG. The results of these checks are stored in GCS for further review.
+This project implements an end-to-end data analysis pipeline for e-commerce data, automating the extraction, transformation, and loading (ETL) processes. The pipeline stages include downloading data, uploading it to Google Cloud Storage (GCS), transforming and loading it into BigQuery, and performing data validation checks for quality assurance. For visualization, Looker Studio is used to create dynamic reports and dashboards based on the BigQuery tables.
 
 ## Project Overview
 
 1. **Download Data**: E-commerce data is downloaded from Kaggle to the local machine.
 2. **Upload to GCS**: A DAG (Directed Acyclic Graph) in Apache Airflow uploads the data from the local machine to Google Cloud Storage.
 3. **Load to BigQuery**: Another DAG in Apache Airflow loads the data from GCS to BigQuery for analysis.
-4. **Data Quality Checks**: SQL-based data quality checks are implemented and orchestrated by an Airflow DAG. The results of these checks are stored in GCS.
+4. **Row Count Checks**: Validates row-level data consistency between the source CSVs in GCS and the BigQuery tables.
+5. **Column Check**: Validates column-level data consistency by comparing metrics between the source CSVs in GCS and the BigQuery tables.
+6. **Data Visulaization**: Utilize Looker Studio to visualize the BigQuery tables according to specific analytical needs.
 
 ## Prerequisites
 
@@ -19,6 +19,7 @@ Additionally, the project includes data quality checks implemented using SQL, wh
 - Kaggle API
 - Astronomer CLI
 - Docker
+- Looker Studio
 
 ## Setup
 
@@ -105,27 +106,54 @@ Open your web browser and go to http://localhost:8080.
 
 2. **Load Data to BigQuery**: Trigger the DAG to load data from GCS to BigQuery.
 
-3. **Run Data Quality Checks**: Trigger the DAG to execute all SQL-based data quality checks.
+3. **Run Row Count Checks**: Trigger the DAG to get the row count and store the results in BQ Table.
 The results of the checks will be stored in GCS.
 
+4. **Run Column Checks**: Trigger the DAG to get the Column Quality Check and store the results in BQ Table.
+The results of the checks will be stored in GCS.
 
-## Data Quality Checks (SQL-Based Checks)
-The following SQL-based data quality checks are implemented:
+### 5. DAGs Created
+1. **ecommerce_upload_csv_to_gcs**: Uploads data from the local machine to Google Cloud Storage (GCS).
+2. **ecommerce_load_gcs_to_bigquery**: Loads the data from GCS to BigQuery for analysis.
+3. **ecommerce_row_count_check**: Validates row-level data consistency.
+4. **ecommerce_column_quality_check**: Validates column-level data consistency.
 
-**Schema Validation**: Ensures the table structure matches the expected schema.
 
-**Completeness Check**: Ensures no mandatory fields are missing.
+### 5. DAG Details
+1. **DAG: ecommerce_upload_csv_to_gcs**
+- Purpose: Upload CSV files from a local dataset folder to a GCS bucket.
+- Tasks:
+    - Load environment variables.
+    - List CSV files in the local dataset folder.
+    - Upload files to GCS using LocalFilesystemToGCSOperator.
+- Key Features: Independent processing of each CSV file with logging for success or failure.
 
-**Uniqueness Check**: Detects duplicate records.
+2. **DAG: ecommerce_load_gcs_to_bigquery**
+- Purpose: Sequentially load CSV files from GCS into BigQuery.
+- Tasks:
+    - Create a BigQuery dataset.
+    - List and filter CSV files in GCS.
+    - Upload files to BigQuery using DataFrame.to_gbq().
+- Key Features: Sequential execution with logging for monitoring.
 
-**Null Value Check**: Identifies and handles null values in critical fields.
+3. **DAG: ecommerce_row_count_check**
+- Purpose: Validate data quality by comparing row counts.
+- Tasks:
+    - Create a dataset and table for results.
+    - List CSV files in GCS.
+    - Compare row counts and log results.
+- Key Features: Logs discrepancies for quality validation.
 
-**Consistency Check**: Validates data against business rules.
+4. **DAG: ecommerce_column_quality_check**
+- Purpose: Validate column-level data quality.
+- Tasks:
+    - Create or update the quality results table.
+    - List CSV files and BigQuery tables.
+    - Perform column checks and log results.
+- Key Features: Detailed insights into column consistency.
 
-**Timeliness Check**: Ensures data is ingested on time.
-
-**Airflow DAG for Data Quality Checks**: A dedicated Airflow DAG orchestrates the execution of all SQL checks.
-The results of the checks are written to a CSV file and stored in GCS for further review.
+### 6. Data Visualization
+Utilized Looker Studio to visualize the BigQuery tables according to specific analytical needs. Create dynamic reports and dashboards to gain insights from the e-commerce data.
 
 ### License
 
